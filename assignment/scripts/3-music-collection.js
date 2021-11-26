@@ -41,4 +41,22 @@ console.log(addToCollection('El Ultimo tour del mundo', 'Bad Bunny', '2020', 'DÃ
 //fifth album is Isolation:
 console.log(addToCollection('Isolation', 'Kali Uchis', '2018', 'After the Storm'));
 //sixth album is Mantra:
-console.log(addToCollection('Mantra', 'Sebastian Yatra', '2018', 'Por Perro'));
+console.log(addToCollection('Mantra', 'Sebastian Yatra', '2018', 'Traicionera- Remix'));
+
+//console.log the 'collection' array
+console.log(collection);
+
+/*- Add a function named `showCollection`. This function should:
+  + Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
+  + Console.log the number of items in the array.
+  + Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
+*/
+
+function showCollection (array){
+  console.log(array.length)
+  for (let x = 0; x < array.length; x++ ){
+    console.log( `${array[x].title} by ${array[x].artist} published in ${array[x].yearPublished} with the best song ${array[x].favoriteSong}`);
+  }
+}
+
+console.log(showCollection(collection));
