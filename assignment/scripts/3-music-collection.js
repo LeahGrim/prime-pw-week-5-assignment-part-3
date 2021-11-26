@@ -87,3 +87,31 @@ console.log(findByArtist('Wisin', collection));
           return findArray
         }
         console.log(findTheArtist('Ozuna', collection));
+        console.log(findTheArtist('Wisin', collection))
+
+
+// STRETCH GOALS: I added a criteria on my search function for good measure
+/*
++ Create a function called `search`. This function should:
+  + Take an input parameter for a search criteria object. Create your solution based on a search object that has these properties:
+  ```
+  { artist: 'Ray Charles', year: 1957 }
+  ```
+  + The returned output from `search` should meet these requirements:
+    + Return a new array of all items in the `collection` matching *all* of the search criteria.
+    + If no results are found, return an empty array.
+    + If there is no search object or an empty search object provided as input, then return all albums in the `collection`.
+*/
+function search(artist, title, year, array){
+  let pandoraArray= [];
+  for (array of array){
+    if (array.artist === artist && array.title === title && array.yearPublished === year)
+        {pandoraArray.push(artist, title, year)
+    }
+  }
+return pandoraArray
+}
+
+console.log(search('Ozuna', 'Aura', '2018', collection));
+console.log(search('Karol G', 'Tusa', '2019', collection));
+console.log(search('Sebastian Yatra', 'Mantra', '2018', collection));
