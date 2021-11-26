@@ -7,12 +7,14 @@ const collection = [];
   - Create a new object having the above properties
   - Add the new object to the end of the `collection` array
   - Return the newly created object
+  -took some creative liberty to add the property "favoriteSong"
 */
-function addToCollection (title, artist, yearPublished) {
+function addToCollection (title, artist, yearPublished, favoriteSong) {
   let album= {
     title: title,
     artist: artist,
     yearPublished: yearPublished,
+    favoriteSong: favoriteSong,
   }
   collection.push(album);
   return album;
@@ -24,4 +26,19 @@ function addToCollection (title, artist, yearPublished) {
   - After all are added, console.log the `collection` array.
 */
 
-console.log(addToCollection('Aura ', 'Ozuna ', '2018 '));
+// first album is Aura by Ozuna:
+console.log(addToCollection('Aura ', 'Ozuna ', '2018 ', 'Devuelveme'));
+//we could use our function to store variables globally
+let ozuna1 = addToCollection('Aura', 'Ozuna', '2018', 'Devuelveme');
+console.log(ozuna1.artist);
+
+//second album is Nibiru:
+console.log(addToCollection('Nibiru', 'Ozuna', '2019', 'Temporal'));
+//third album is X100PRE by Bad Bunny:
+console.log(addToCollection('X100PRE', 'Bad Bunny', '2018', 'Ni Bien Ni Mal'));
+//fourth album is el ultímo tour del mundo:
+console.log(addToCollection('El Ultimo tour del mundo', 'Bad Bunny', '2020', 'Dákiti'));
+//fifth album is Isolation:
+console.log(addToCollection('Isolation', 'Kali Uchis', '2018', 'After the Storm'));
+//sixth album is Mantra:
+console.log(addToCollection('Mantra', 'Sebastian Yatra', '2018', 'Por Perro'));
