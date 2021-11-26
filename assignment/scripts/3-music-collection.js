@@ -77,3 +77,13 @@ return finderArray
 }
 console.log(findByArtist('Ozuna', collection));
 console.log(findByArtist('Wisin', collection));
+
+//tried to recreate the findByArtist using a for of loop
+        function findTheArtist (artist, array){
+          let findArray =[];
+          for (array of array){
+            if (array.artist === artist) {findArray.push(artist)}
+          }
+          return findArray
+        }
+        console.log(findTheArtist('Ozuna', collection));
